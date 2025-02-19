@@ -8,8 +8,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background-color: #0f0f0f;
+    min-height: calc(100vh - 40px * 2);
+    background-color: rgb(28, 23, 23);
+    padding: 40px;
 }
 
 .fire-container {
@@ -22,6 +23,7 @@ body {
 
 table {
     border-collapse: collapse;
+    border: 1px solid #000;
 
     td {
         width: 8px;
@@ -29,19 +31,15 @@ table {
         text-align: center;
         vertical-align: center;
         font-family: monospace;
-        font-size: 18px;
+        font-size: 10px;
         position: relative;
+        color: #fff;
+        border: 1px solid #000;
 
-        .pixel-index {
-            width: 8px;
-            height: 8px;
-            font-size: 10px;
-            display: inline-block;
-            position: absolute;
-            top: 2px;
-            right: 2px;
-            color: #999;
-            font-size: 5px;
+        &.debug-mode {
+            width: 6px;
+            height: 6px;
+            padding: 8px;
         }
 
         .pixel {
@@ -49,5 +47,17 @@ table {
             height: 4px;
             border: 0;
         }
+    }
+
+    .pixel-index {
+        width: 8px;
+        height: 8px;
+        font-size: 5px;
+        display: inline-block;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        color: #fff;
+        font-size: 5px;
     }
 }
