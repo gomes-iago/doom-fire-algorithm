@@ -62,10 +62,10 @@ table {
     }
 }
 
-.color-pallete-container {
+.color-palette-container {
     display: flex;
 
-    .color-pallete-pixel {
+    .color-palette-pixel {
         width: 8px;
         height: 8px;
         border-top: 1px solid #000;

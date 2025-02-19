@@ -8,21 +8,26 @@
 </head>
 <body>
     <div id="fire-canvas"></div>
-    <p>Color pallete</p>
-    <div id="color-pallete"></div>
-    <button onclick="setWindDirection('left')">Left</button>
-    <button onclick="setWindDirection('')">No wind</button>
-    <button onclick="setWindDirection('right')">Right</button>
-    <button onclick="setFireIntensity(3)">Max fire</button>
-    <button onclick="setFireIntensity(20)">Min fire</button>
-    <button onclick="setFireIntensity('add')">+ fire</button>
-    <button onclick="setFireIntensity('subtract')">- fire</button>
-    <button onclick="toggleDebugMode()">Debug mode</button>
-    <button onclick="updateFireVelocity('max')">Max velocity</button>
-    <button onclick="updateFireVelocity('min')">Min velocity</button>
-    <button onclick="updateFireVelocity('add')">+ velocity</button>
-    <button onclick="updateFireVelocity('subtract')">- velocity</button>
-
+    <p>Color palette</p>
+    <div id="color-palette"></div>
+    <div style="display: flex; gap: 5px">
+        <button onclick="setWindDirection('left')">Left</button>
+        <button onclick="setWindDirection('')">No wind</button>
+        <button onclick="setWindDirection('right')">Right</button>
+        <button onclick="setFireIntensity(3)">Max fire</button>
+        <button onclick="setFireIntensity(20)">Min fire</button>
+        <button onclick="setFireIntensity('add')">+ fire</button>
+        <button onclick="setFireIntensity('subtract')">- fire</button>
+        <button onclick="toggleDebugMode()">Debug mode</button>
+        <button onclick="updateFireVelocity('max')">Max velocity</button>
+        <button onclick="updateFireVelocity('min')">Min velocity</button>
+        <button onclick="updateFireVelocity('add')">+ velocity</button>
+        <button onclick="updateFireVelocity('subtract')">- velocity</button>
+        <div>
+            <p>Grayscale filter</p>
+            <input id="grayscale-input" type="range" value="0"  min="0" max="10" onchange="applyGrayscale()">
+        </div>
+    </div>
 
     <script src="fire.js" type="text/javascript"></script>
 </body>
