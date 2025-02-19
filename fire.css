@@ -11,6 +11,8 @@ body {
     min-height: calc(100vh - 40px * 2);
     background-color: rgb(28, 23, 23);
     padding: 40px;
+    gap: 20px;
+    color: #fff;
 }
 
 .fire-container {
@@ -33,7 +35,6 @@ table {
         font-family: monospace;
         font-size: 10px;
         position: relative;
-        color: #fff;
         border: 1px solid #000;
 
         &.debug-mode {
@@ -57,7 +58,22 @@ table {
         position: absolute;
         top: 2px;
         right: 2px;
-        color: #fff;
         font-size: 5px;
+    }
+}
+
+.color-pallete-container {
+    display: flex;
+
+    .color-pallete-pixel {
+        width: 8px;
+        height: 8px;
+        border-top: 1px solid #000;
+        border-left: 1px solid #000;
+        border-bottom: 1px solid #000;
+
+        &:last-child {
+            border: 1px solid #000;
+        }
     }
 }
