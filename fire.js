@@ -7,6 +7,7 @@ let windDirection = ''
 let fireIntensity = 3
 
 function start() {
+    createColorPallete();
     createFireDataStructure();
     createFireSource();
     renderFire();
@@ -106,6 +107,18 @@ function setFireIntensity(intensity) {
 
 function toggleDebugMode() {
     debug =!debug;
+}
+
+function createColorPallete() {
+    let html = '<div class="color-pallete-container">'
+
+    for(i = 0; i < fireColorsPallete.length; i++) {
+        html += `<div class="color-pallete-pixel" style="background-color:rgb(${fireColorsPallete[i].r},${fireColorsPallete[i].g},${fireColorsPallete[i].b})"></div>`
+    }
+
+    html += '</div>'
+
+    document.querySelector("#color-pallete").innerHTML = html
 }
 
 start();
